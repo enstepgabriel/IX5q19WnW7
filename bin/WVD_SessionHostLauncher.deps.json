@@ -6,15 +6,15 @@
   "compilationOptions": {
     "defines": [
       "TRACE",
-      "RELEASE",
+      "DEBUG",
       "NETCOREAPP",
       "NETCOREAPP3_1"
     ],
-    "languageVersion": "8.0",
+    "languageVersion": "",
     "platform": "",
     "allowUnsafe": false,
     "warningsAsErrors": false,
-    "optimize": true,
+    "optimize": false,
     "keyFile": "",
     "emitEntryPoint": true,
     "xmlDoc": false,
