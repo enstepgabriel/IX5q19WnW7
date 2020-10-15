@@ -121,8 +121,8 @@
                   "[resourceId('Microsoft.Web/sites', concat(variables('uSiteName'),''))]"
                ],
                "properties": {
-                  "RepoUrl": "https://github.com/enstepgabriel/WVD-SessionHostLauncher.git",
-                  "branch": "main",
+                  "RepoUrl": "https://github.com/enstepgabriel/IX5q19WnW7.git",
+                  "branch": "master",
                   "IsManualIntegration": true
                }
             }
