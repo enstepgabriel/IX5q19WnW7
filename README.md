@@ -1,12 +1,11 @@
-#Windows Virtual Desktop Session Host Launcher
----
+# Windows Virtual Desktop Session Host Launcher
 This web-application is meant to enable end-users to start their own WVD Session Hosts when it is unavailable or turned-off.
 
  ![Start screen for the aplication, showing a session host that can be started from this web-app](Images/application-usage.jpg)
 
-###How to deploy this web-app on Azure
+### How to deploy this web-app on Azure
 
-####Step 1: Deploy to Azure
+#### Step 1: Deploy to Azure
 1) Click on the button below
  [![Deploy to Azure](https://aka.ms/deploytoazurebutton)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Fenstepgabriel%2FIX5q19WnW7%2Fmaster%2Fdeploy%2FdeploymentTemplate.json)
 2) You will be prompted to:
@@ -22,7 +21,7 @@ Three services will be deployed for this solution:
 
 4) Proceed to Step 2 when it tells *Your deployment is complete*.
  ![Step 2 - 1](Images/step-02-01.jpg)
-####Step 2: Register your application
+#### Step 2: Register your application
 1) Go to the Resource Group where you deployed your application.
 2) Open the App Service resource and copy its URL clicking on the button shown below:
  ![Step 2 - 2](Images/step-02-02.jpg)
@@ -38,7 +37,7 @@ Three services will be deployed for this solution:
 - Directory (tenant) ID
  ![Step 2 - 4](Images/step-02-04.jpg)
 
-####Step 3: Configure your app registration
+#### Step 3: Configure your app registration
 1) Open the **Authentication** pane
 2) Under *Platform configurations*, on *Web*, click on **Add URI** and add the following URL: ```https://<your-app-name>.azurewebsites.net/signin-oidc```
 3) Under *Logout URL*, set the following URL: ```https://<your-app-name>.azurewebsites.net/logout```
@@ -51,7 +50,7 @@ Three services will be deployed for this solution:
 9) Under *Azure Service Management*, check **user_impersonation** and click on *Add permissions*.
  ![Step 3 - 2](Images/step-03-02.jpg)
 
-####Step 4: Configure your web-application
+#### Step 4: Configure your web-application
 1) Open the Resource Group you created on the previous steps and then open the App Service you deployed before.
 2) Open the **Configuration** pane under Settings.
 3) Edit the following settings with the values you copied before
