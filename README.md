@@ -6,8 +6,7 @@ This web-application is meant to enable end-users to start their own WVD Session
 ### How to deploy this web-app on Azure
 
 #### Step 1: Deploy to Azure
-1) Click on the button below
- [![Deploy to Azure](https://aka.ms/deploytoazurebutton)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Fenstepgabriel%2FIX5q19WnW7%2Fmaster%2Fdeploy%2FdeploymentTemplate.json)
+1) [![Deploy to Azure](https://aka.ms/deploytoazurebutton)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Fenstepgabriel%2FIX5q19WnW7%2Fmaster%2Fdeploy%2FdeploymentTemplate.json)
 2) You will be prompted to:
 - inform an existing Resource Group or create a new one 
 - inform a Site Name for this application. You can name it as ```wvd-shl-\<your-company-name>```
