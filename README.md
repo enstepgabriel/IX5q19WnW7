@@ -58,6 +58,29 @@ Three services will be deployed for this solution:
 - **AzureAd:ClientId** - The application (client) ID you copied on Step 2.6
 - **AzureAd:ClientSecret** - The application secret you copied on Step 3.7
  ![Step 4 - 1](Images/step-04-01.jpg)
- 4) Click on *Save*
- 5) Go to the *Overview* pane and click on **Restart**
- 6) After the application has succesfully restarted, you can click on its URL. Login in with an account with privileges to WVD Session Hosts and use it.
+4) Click on *Save*
+5) Go to the *Overview* pane and click on **Restart**
+#### Step 5: Grant role to Service Principal
+1) Open the Resource Group you created on the previous steps.
+2) Open the **Access control (IAM)** pane
+3) Under *Add*, click on **Add custom role**
+ ![Step 5 - 1](Images/step-05-01.jpg)
+4) Give it a name, like ```WVD Session Host Lancher Application Role``` and a description
+5) Select the **JSON** tab and click on **Edit**
+6) Paste the following scopes under ```Properties > Permissions > Actions```, inside the brackets:
+```
+"Microsoft.DesktopVirtualization/applicationgroups/applications/read",
+"Microsoft.DesktopVirtualization/applicationgroups/desktops/read",
+"Microsoft.DesktopVirtualization/applicationgroups/read",
+"Microsoft.Compute/virtualMachines/start/action",
+"Microsoft.Compute/virtualMachines/write",
+"Microsoft.Compute/virtualMachines/read",
+"Microsoft.Compute/virtualMachines/instanceView/read",
+"Microsoft.Authorization/roleAssignments/read"
+```
+7) It should look like the image below
+ ![Step 5 - 2](Images/step-05-02.jpg)
+8) Click on **Review + create**
+9) After you created the new role, click on *Add* and then click on **Add role assignment**
+10) It should open a pane on the right side of your screen. Under *Role*, select the new role you have created. Under *Select*, search for your service principal's name. Select it and click **Save**.
+11) After registering the service principal, you can click on the application URL. Login in with an account with privileges to WVD Session Hosts and use it.
