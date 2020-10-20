@@ -1,6 +1,10 @@
 # Windows Virtual Desktop Session Host Launcher
 This web-application is meant to enable end-users to start their own WVD Session Hosts when it is unavailable or turned-off.
 
+Pre-requisites:
+* WVD Spring 2020 Update
+* User with Desktop Virtualization User role assigned on any Application Group
+
  ![Start screen for the aplication, showing a session host that can be started from this web-app](Images/application-usage.jpg)
 
 ### How to deploy this web-app on Azure
@@ -88,5 +92,5 @@ Microsoft Graph - directory.read.all
  ![Step 5 - 2](Images/step-05-02.jpg)
 8) Click on **Review + create**
 9) After you created the new role, click on *Add* and then click on **Add role assignment**
-10) It should open a pane on the right side of your screen. Under *Role*, select the new role you have created. Under *Select*, search for your service principal's name. Select it and click **Save**.
-11) After registering the service principal, you can click on the application URL. Login in with an account with privileges to WVD Session Hosts and use it.
+10) It should open a pane on the right side of your screen. Under *Role*, select the new role you have created. Under *Select*, search for your Service Principal's name (the same you created on step 2.4). Select it and click **Save**.
+11) After registering the Service Principal, you can click on the application URL. Login in with an account with privileges to WVD Session Hosts and use it.
