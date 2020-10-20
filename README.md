@@ -74,7 +74,7 @@ Microsoft Graph - directory.read.all
 2) Open the **Access control (IAM)** pane
 3) Under *Add*, click on **Add custom role**
  ![Step 5 - 1](Images/step-05-01.jpg)
-4) Give it a name, like ```WVD Session Host Lancher Application Role``` and a description
+4) Give it a name, like ```WVD Session Host Launcher Application Role``` and a description
 5) Select the **JSON** tab and click on **Edit**
 6) Paste the following scopes under ```Properties > Permissions > Actions```, inside the brackets:
 ```
