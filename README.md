@@ -46,7 +46,12 @@ Three services will be deployed for this solution:
 7) Under *Client secrets* click on **New client secret**. Give it a name and set it to *Never* expire. Copy the generated key and store it on a notepad as you can see this only once. You will need it later.
  ![Step 3 - 1](Images/step-03-01.jpg)
 8) Open **API permissions** pane and then click on **Add a permission**.
-9) Under *Azure Service Management*, check **user_impersonation** and click on *Add permissions*.
+9) Add the following permissions:
+```
+Azure Service Management - user_impersonation
+Microsoft Graph - user.read
+Microsoft Graph - directory.read.all
+```
  ![Step 3 - 2](Images/step-03-02.jpg)
 
 #### Step 4: Configure your web-application
@@ -61,7 +66,7 @@ Three services will be deployed for this solution:
 4) Click on *Save*
 5) Go to the *Overview* pane and click on **Restart**
 #### Step 5: Grant role to Service Principal
-1) Open the Resource Group you created on the previous steps.
+1) Open the Resource Group where your WVD is deployed.
 2) Open the **Access control (IAM)** pane
 3) Under *Add*, click on **Add custom role**
  ![Step 5 - 1](Images/step-05-01.jpg)
@@ -76,7 +81,8 @@ Three services will be deployed for this solution:
 "Microsoft.Compute/virtualMachines/write",
 "Microsoft.Compute/virtualMachines/read",
 "Microsoft.Compute/virtualMachines/instanceView/read",
-"Microsoft.Authorization/roleAssignments/read"
+"Microsoft.Authorization/roleAssignments/read",
+"Microsoft.DesktopVirtualization/hostpools/sessionhosts/read"
 ```
 7) It should look like the image below
  ![Step 5 - 2](Images/step-05-02.jpg)
