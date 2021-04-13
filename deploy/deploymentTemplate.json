@@ -30,9 +30,9 @@
          "name": "[variables('uSiteName')]",
          "location": "[resourceGroup().location]",
          "sku": {
-            "name": "F1",
-            "tier": "Shared",
-            "size": "F1"
+            "name": "B1",
+            "tier": "Basic",
+            "size": "B1"
          },
          "kind": "app",
          "properties": {
