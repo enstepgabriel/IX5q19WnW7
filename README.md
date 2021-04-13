@@ -47,8 +47,8 @@ Three services will be deployed for this solution:
 4) Under *Implicit grant*, check **ID tokens**
 5) Click on **Save**
 6) Open the **Certificates & secrets** pane
-7) Under *Client secrets* click on **New client secret**. Give it a name and set it to *Never* expire. Copy the generated key and store it on a notepad as you can see this only once. You will need it later.
- ![Step 3 - 1](Images/step-03-01.jpg)
+7) Under *Client secrets* click on **New client secret**. Give it a name and set it to *Never* expire. Copy the generated key and store it on a notepad as you can see this only once. You will need it later.  
+![Step 3 - 1](Images/step-03-01.jpg)
 8) Open **API permissions** pane and then click on **Add a permission**.
 9) Add the following permissions:
 ```
@@ -86,7 +86,8 @@ Microsoft Graph - directory.read.all
 "Microsoft.Compute/virtualMachines/read",
 "Microsoft.Compute/virtualMachines/instanceView/read",
 "Microsoft.Authorization/roleAssignments/read",
-"Microsoft.DesktopVirtualization/hostpools/sessionhosts/read"
+"Microsoft.DesktopVirtualization/hostpools/sessionhosts/read",
+"Microsoft.DesktopVirtualization/hostpools/sessionhosts/write"
 ```
 7) It should look like the image below
  ![Step 5 - 2](Images/step-05-02.jpg)

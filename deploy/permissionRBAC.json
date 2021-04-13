@@ -16,7 +16,8 @@
                     "Microsoft.Compute/virtualMachines/read",
                     "Microsoft.Compute/virtualMachines/instanceView/read",
                     "Microsoft.Authorization/roleAssignments/read",
-                    "Microsoft.DesktopVirtualization/hostpools/sessionhosts/read"
+                    "Microsoft.DesktopVirtualization/hostpools/sessionhosts/read",
+                    "Microsoft.DesktopVirtualization/hostpools/sessionhosts/write"
                 ],
                 "notActions": [],
                 "dataActions": [],
